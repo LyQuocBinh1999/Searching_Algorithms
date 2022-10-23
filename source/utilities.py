@@ -59,7 +59,7 @@ def visualize_maze(matrix, bonuses, waypoints, start, end, path = None, visited_
 
     if visited_coordinates:
         for i in range(len(visited_coordinates)):
-            if visited_coordinates[i] not in path:
+            if visited_coordinates[i] not in path and visited_coordinates[i] != start:
                 plt.scatter(visited_coordinates[i][1], -visited_coordinates[i][0], marker = '*', color = 'silver', s = legend_size)
 
     if path:
